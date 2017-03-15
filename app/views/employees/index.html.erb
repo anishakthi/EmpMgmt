@@ -1,0 +1,22 @@
+<h1>Listing Employee</h1>
+ 
+<table>
+  <tr>
+    <th>Employee Id</th>
+    <th>Employee name</th>
+    <th>Date of joining</th>
+    <th>Status</th>
+    <th>Date of Birth</th>
+  </tr>
+ 
+  <% @employee.each do |employee| %>
+    <tr>
+      <td><%= employee.id %></td>
+      <td><%= employee.name %></td>
+      <td><%= employee.doj %></td>
+      <td><%= employee.status %></td>
+      <td><%= employee.dob %></td>
+      <td><%= link_to 'Show', employee_path(employee) %></td>
+    </tr>
+  <% end %>
+</table>
