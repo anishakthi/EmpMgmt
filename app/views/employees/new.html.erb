@@ -1,0 +1,27 @@
+<h1>Add Employee</h1>
+
+<%= form_for :employee, url: employees_path do |f| %>
+  <p>
+    <%= f.label :Employee_Name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :Date_Of_Joining %><br>
+    <%= f.date_select :doj %>
+  </p>
+ 
+  <p>
+    <%= f.label :Status %><br>
+    <%= f.select :status, ['Probation', 'Confirmed'] %>
+  </p>
+
+  <p>
+    <%= f.label :Date_Of_Birth %><br>
+    <%= f.date_select :dob %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
