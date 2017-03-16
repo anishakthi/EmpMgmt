@@ -7,6 +7,7 @@
     <th>Date of joining</th>
     <th>Status</th>
     <th>Date of Birth</th>
+	<th colspan="2"> </th>
   </tr>
  
   <% @employee.each do |employee| %>
@@ -16,7 +17,12 @@
       <td><%= employee.doj %></td>
       <td><%= employee.status %></td>
       <td><%= employee.dob %></td>
-      <td><%= link_to 'Show', employee_path(employee) %></td>
+      <td><%= link_to 'Show', employee_path(employee)%></td>
+	  <td><%= link_to 'Delete', employee, method: :delete,
+	                                       data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
+<br>
+
+<%= link_to 'New Employee', new_employee_path %>
