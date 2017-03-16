@@ -3,4 +3,5 @@ class Employee < ApplicationRecord
   validates :status, acceptance: {accept: ['Probation','Confirmed']}
   validates :dob, timeliness: { on_or_before: lambda { Date.current }, type: :date }
   validates :doj, presence: true
+  validates_date :dob, :before => :doj
 end
