@@ -1,4 +1,4 @@
-<center><h1>Listing Employee</h1>
+<center><h1>Employee Inventory</h1>
  
 <table>
   <tr>
@@ -17,10 +17,8 @@
       <td><%= employee.doj %></td>
       <td><%= employee.status %></td>
       <td><%= employee.dob %></td>
-      <td><%= link_to 'Show', employee_path(employee)%></td>
-	  <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
-	  <td><%= link_to 'Delete', employee, method: :delete,
-	                                       data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'View', employee_path(employee)%></td>
+	  
     </tr>
   <% end %>
 </table>

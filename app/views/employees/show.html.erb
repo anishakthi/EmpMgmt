@@ -19,8 +19,9 @@
   <%= @employee.dob %>
 </p>
 
-<%= link_to 'InventoryPage', employees_path %> 
-
-
-<%= link_to 'Edit', edit_employee_path(@employee) %>
+<td><%= link_to 'Edit', edit_employee_path(@employee) %></td>
+<td><%= link_to 'Delete', @employee, method: :delete,
+	                                       data: { confirm: 'Are you sure?' } %></td>
+<br>
+<%= link_to 'back', employees_path %> 
 </center>
