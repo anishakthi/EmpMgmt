@@ -1,13 +1,5 @@
 class EmployeesController < ApplicationController
   
-  before_filter :validate_request, :only => [:create, :update]
-
-  def validate_request
-    if params[:commit] == "Cancel"
-      redirect_to employees_path
-    end
-  end
-  
   def new 
   end
   
